@@ -16,11 +16,11 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Install dependencies using uv (creates virtualenv)
-RUN uv venv /app/.venv && \
+RUN uv venv /venv && \
     uv pip install -r requirements.txt
 
 # Set environment variables
-ENV PATH="/app/.venv/bin:$PATH"
+ENV PATH="/venv/bin:$PATH"
 ENV PYTHONPATH="/app"
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
