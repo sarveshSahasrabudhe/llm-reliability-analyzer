@@ -31,7 +31,18 @@ cp .env.example .env
 # Edit .env and add your GROQ_API_KEY
 ```
 
-### Running the App
+
+### Running with Docker (Recommended)
+```bash
+# Start both API and Dashboard
+docker-compose up --build
+
+# Access:
+# - Dashboard: http://localhost:8501
+# - API Docs:  http://localhost:8000/docs
+```
+
+### Running Manually (Local)
 ```bash
 # Start the Dashboard
 streamlit run ui/dashboard.py

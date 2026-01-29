@@ -802,9 +802,15 @@ Comparing 2nd run (`c62b816d`) vs Base run (`c2b32d69`):
 - ✅ Smoke tests (`datasets/smoke.json`)
 - ✅ CI Runner (`run_ci.py`)
 
-### 📋 Remaining (Days 12-14)
+### 🔄 Completed (Day 12)
 
-- Docker deployment
+**Dockerization**:
+- ✅ `Dockerfile`: Multi-stage build with Python 3.12 + `uv`
+- ✅ `docker-compose.yaml`: Orchestrates API and Dashboard services
+- ✅ **One-Command Start**: `docker-compose up --build`
+
+### 📋 Remaining (Days 13-14)
+
 - Documentation polish
 - Demo script
 
