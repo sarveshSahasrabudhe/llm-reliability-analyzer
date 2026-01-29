@@ -56,7 +56,7 @@ async def run_smoke_tests():
                         passed = False
                         reasons.append(res.reason)
                         
-                if any(k in test.evaluation_criteria for k in ["refusal", "required_plrases"]):
+                if any(k in test.evaluation_criteria for k in ["refusal", "required_phrases"]):
                     res = compliance_eval.evaluate(test, output)
                     if not res.passed:
                         passed = False
