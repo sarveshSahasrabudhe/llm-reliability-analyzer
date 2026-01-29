@@ -1,0 +1,11 @@
+id: grounding_paris_01
+name: France Capital Check
+tags:
+  - grounding
+  - geography
+context: |
+  France is a country in Western Europe. Its capital is Paris, known for the Eiffel Tower.
+prompt: What is the capital of France?
+expected_behavior: Answer must be Paris.
+constraints:
+  - "exact_match: Paris"

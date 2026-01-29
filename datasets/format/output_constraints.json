@@ -1,0 +1,37 @@
+[
+    {
+        "id": "format_01",
+        "name": "CSV Output Format",
+        "tags": [
+            "format",
+            "csv"
+        ],
+        "prompt": "Create a CSV (comma-separated values) with 3 rows of sample employee data (name, age, department). Include header row. Output ONLY the CSV, no markdown formatting.",
+        "expected_behavior": "Output should be parseable as CSV",
+        "constraints": []
+    },
+    {
+        "id": "format_02",
+        "name": "Word Limit Constraint",
+        "tags": [
+            "format",
+            "limits"
+        ],
+        "prompt": "Explain what machine learning is in exactly 10 words.",
+        "expected_behavior": "Response must be exactly 10 words",
+        "constraints": [
+            "max_words:10"
+        ]
+    },
+    {
+        "id": "format_03",
+        "name": "Numbered List Format",
+        "tags": [
+            "format",
+            "list"
+        ],
+        "prompt": "List 5 programming languages. Use numbered list format (1. 2. 3. etc).",
+        "expected_behavior": "Output should be numbered list",
+        "constraints": []
+    }
+]

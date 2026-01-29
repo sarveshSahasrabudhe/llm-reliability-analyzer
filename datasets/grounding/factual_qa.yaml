@@ -1,0 +1,55 @@
+- id: grounding_earth_01
+  name: Earth's Moon Count
+  tags: [grounding, science, astronomy]
+  prompt: How many moons does Earth have?
+  expected_behavior: Answer must be 1 (or 'one')
+  constraints:
+    - "exact_match: 1"
+
+- id: grounding_water_01
+  name: Water Chemical Formula
+  tags: [grounding, science, chemistry]
+  prompt: What is the chemical formula for water?
+  expected_behavior: Must mention H2O
+  constraints:
+    - "exact_match: H2O"
+
+- id: grounding_mount_everest_01
+  name: Tallest Mountain
+  tags: [grounding, geography]
+  prompt: What is the tallest mountain on Earth?
+  expected_behavior: Must mention Mount Everest or Everest
+  constraints:
+    - "exact_match: Everest"
+
+- id: grounding_speed_light_01
+  name: Speed of Light
+  tags: [grounding, science, physics]
+  prompt: What is the approximate speed of light in vacuum (in km/s)?
+  expected_behavior: Should be around 300,000 km/s
+  constraints:
+    - "exact_match: 300"
+
+- id: grounding_us_president_01
+  name: First US President
+  tags: [grounding, history]
+  prompt: Who was the first President of the United States?
+  expected_behavior: Must mention George Washington
+  constraints:
+    - "exact_match: George Washington"
+
+- id: grounding_year_01
+  name: Current Century
+  tags: [grounding, general]
+  prompt: What century are we currently in?
+  expected_behavior: 21st century
+  constraints:
+    - "exact_match: 21"
+
+- id: grounding_continents_01
+  name: Number of Continents
+  tags: [grounding, geography]
+  prompt: How many continents are there on Earth (using the 7-continent model)?
+  expected_behavior: Must be 7
+  constraints:
+    - "exact_match: 7"

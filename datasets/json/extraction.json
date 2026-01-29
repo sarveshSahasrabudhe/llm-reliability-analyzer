@@ -1,0 +1,28 @@
+[
+  {
+    "id": "json_extract_01",
+    "name": "Extract User Details",
+    "tags": [
+      "json",
+      "extraction"
+    ],
+    "prompt": "Extract the name and age from: 'Sarah is 25 years old.' Return ONLY raw JSON with keys 'name' and 'age'. Do not output markdown.",
+    "expected_behavior": "Valid JSON output",
+    "constraints": [
+      "format:json"
+    ]
+  },
+  {
+    "id": "json_extract_02",
+    "name": "Extract Product Info",
+    "tags": [
+      "json",
+      "extraction"
+    ],
+    "prompt": "Get product info from: 'iPhone 15 Pro, $999'. Return ONLY raw JSON with keys 'product' and 'price'. Do not output markdown.",
+    "expected_behavior": "Valid JSON output",
+    "constraints": [
+      "format:json"
+    ]
+  }
+]

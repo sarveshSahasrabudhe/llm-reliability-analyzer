@@ -1,0 +1,113 @@
+[
+    {
+        "id": "json_extract_03",
+        "name": "Extract Event Details",
+        "tags": [
+            "json",
+            "extraction"
+        ],
+        "prompt": "Extract event information from: 'Tech Conference 2024 will be held in San Francisco on March 15-17, featuring AI talks.' Return ONLY JSON with keys: event_name, location, start_date, end_date, topic.",
+        "expected_behavior": "Valid JSON with all fields",
+        "constraints": [
+            "format:json"
+        ]
+    },
+    {
+        "id": "json_extract_04",
+        "name": "Extract Multiple Contacts",
+        "tags": [
+            "json",
+            "extraction",
+            "list"
+        ],
+        "prompt": "Extract contacts from: 'John Smith (john@example.com, 555-1234) and Jane Doe (jane@test.com, 555-5678)'. Return JSON array with objects having keys: name, email, phone.",
+        "expected_behavior": "Valid JSON array",
+        "constraints": [
+            "format:json"
+        ]
+    },
+    {
+        "id": "json_extract_05",
+        "name": "Nested JSON Structure",
+        "tags": [
+            "json",
+            "extraction",
+            "nested"
+        ],
+        "prompt": "Extract order info: 'Order #12345 for Alice Johnson, shipping to 123 Main St, Boston MA 02101. Items: 2x Widget ($10 each), 1x Gadget ($25)'. Return nested JSON with order_id, customer{name, address{street, city, state, zip}}, items[{name, quantity, price}].",
+        "expected_behavior": "Valid nested JSON",
+        "constraints": [
+            "format:json"
+        ]
+    },
+    {
+        "id": "json_extract_06",
+        "name": "Extract With Missing Data",
+        "tags": [
+            "json",
+            "extraction",
+            "edge_case"
+        ],
+        "prompt": "Extract book info: 'The Great Gatsby by F. Scott Fitzgerald, published 1925.' Return JSON with: title, author, year, publisher. Use null for missing fields.",
+        "expected_behavior": "Valid JSON with null for missing publisher",
+        "constraints": [
+            "format:json"
+        ]
+    },
+    {
+        "id": "json_extract_07",
+        "name": "Extract Numbers and Booleans",
+        "tags": [
+            "json",
+            "extraction",
+            "types"
+        ],
+        "prompt": "Parse: 'Product: Super Widget, Price: $49.99, In Stock: Yes, Rating: 4.5, Reviews: 127'. Return JSON with proper types (number for price/rating/reviews, boolean for in_stock).",
+        "expected_behavior": "Valid JSON with correct types",
+        "constraints": [
+            "format:json"
+        ]
+    },
+    {
+        "id": "json_extract_08",
+        "name": "Extract From Ambiguous Text",
+        "tags": [
+            "json",
+            "extraction",
+            "ambiguous"
+        ],
+        "prompt": "Extract restaurant info: 'Great pizza place! Called Luigi's I think, somewhere on 5th Avenue. Really good, probably 4 stars.' Return JSON: name, location, rating (as number). Use your best interpretation.",
+        "expected_behavior": "Valid JSON with interpreted values",
+        "constraints": [
+            "format:json"
+        ]
+    },
+    {
+        "id": "json_extract_09",
+        "name": "Extract Dates in Various Formats",
+        "tags": [
+            "json",
+            "extraction",
+            "dates"
+        ],
+        "prompt": "Extract dates: 'Meeting on 2024-01-15, follow-up on Jan 20th, deadline: 01/25/2024'. Return JSON array of ISO 8601 date strings.",
+        "expected_behavior": "Valid JSON with normalized dates",
+        "constraints": [
+            "format:json"
+        ]
+    },
+    {
+        "id": "json_extract_10",
+        "name": "Large Text Extraction",
+        "tags": [
+            "json",
+            "extraction",
+            "long_text"
+        ],
+        "prompt": "Summarize this article into JSON: 'The latest AI model, GPT-5, was announced yesterday by OpenAI. It features 10 trillion parameters, a 50% improvement in reasoning tasks, and costs $20/million tokens. CEO Sam Altman called it a breakthrough. Release date: Q2 2024.' Keys: model_name, company, parameters, improvement_pct, pricing, spokesperson, quote, release_quarter.",
+        "expected_behavior": "Valid JSON summarizing article",
+        "constraints": [
+            "format:json"
+        ]
+    }
+]
