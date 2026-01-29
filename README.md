@@ -1,27 +1,58 @@
-# LLM Failure & Reliability Analyzer
+# LLM Reliability Analyzer 🔬
 
-A production-minded system that evaluates LLM reliability across hallucination risk, grounding, instruction compliance, format correctness, prompt sensitivity, and latency — with regression tracking and CI integration.
+> **Turn prompt engineering from alchemy into engineering.**
+> A comprehensive platform for semantic evaluation, robustness testing, and regression detection of Large Language Models.
 
-## Features
-- **Test Case Management**: Schema-based test definitions.
-- **Execution Engine**: Sequential/concurrent test running with retry logic.
-- **Rule-Based Evaluation**: JSON validation, instruction compliance, latency tracking.
-- **LLM-as-Judge**: Qualitative evaluation using model-based grading.
-- **Prompt Sensitivity**: perturbation analysis for stability checking.
-- **Dashboard**: Streamlit-based visualization of results and regressions.
-- **CI/CD Integration**: Automated reliability checks.
+![Dashboard Preview](./docs/images/dashboard_preview.png)
 
-## Setup
-1. Clone the repository.
-2. Install `uv` if not already installed.
-3. specificy the python version: `uv python install 3.12`
-4. Create a virtual environment: `uv venv`
-5. Activate the environment: `source .venv/bin/activate`
-6. Install dependencies: `uv pip install -r requirements.txt`
-7. Ensure Ollama is running and pull the model: `ollama pull llama3`
-8. Copy `.env.example` to `.env`.
+## 📖 Documentation
+- **[Walkthrough (Day-by-Day Log)](docs/WALKTHROUGH.md)**: Steps we took from Day 1 to Day 11.
+- **[Project Overview](docs/PROJECT_OVERVIEW.md)**: Why we built this and our philosophy.
+- **[Tech Stack](docs/TECH_STACK.md)**: Detailed breakdown of technologies used.
 
-## Running
-- **First Run (Smoke Test)**: `python -m evaluator.run_suite`
-- **API**: `uvicorn app.main:app --reload`
-- **Dashboard**: `streamlit run ui/dashboard.py`
+## 🚀 Quick Start
+
+### Prerequisites
+- Python 3.12+
+- Docker (optional)
+- Groq API Key (for LLM inference)
+
+### Installation
+```bash
+# 1. Clone the repo
+git clone https://github.com/sarveshSahasrabudhe/llm-reliability-analyzer.git
+cd llm-reliability-analyzer
+
+# 2. Install dependencies (uv recommended)
+pip install -r requirements.txt
+
+# 3. Set up environment
+cp .env.example .env
+# Edit .env and add your GROQ_API_KEY
+```
+
+### Running the App
+```bash
+# Start the Dashboard
+streamlit run ui/dashboard.py
+
+# Run the Test Suite (CLI)
+python scripts/trigger_full_run.py
+```
+
+## ✨ Key Features
+- **30+ Automated Tests**: Covering JSON extraction, Grounding, Refusal, and more.
+- **LLM-as-a-Judge**: Semantic evaluation for complex outputs.
+- **Prompt Sensitivity Engine**: Tests robustness against rephrasing and noise.
+- **Regression Comparison**: Side-by-side run analysis to catch bugs.
+- **CI/CD Pipeline**: GitHub Actions integration for automated verification.
+
+## 📂 Project Structure
+- `app/`: FastAPI backend service
+- `ui/`: Streamlit dashboard
+- `evaluator/`: Core logic (LLM clients, judges, perturbations)
+- `datasets/`: Test cases in JSON/YAML
+- `scripts/`: Utility scripts for maintenance
+
+---
+Built with ❤️ by [Your Name] & Google DeepMind Agent
