@@ -5,6 +5,7 @@ Run checks specifically for Continuous Integration environment.
 Exits with code 1 if tests fail, stopping the build.
 """
 import sys
+import os
 import asyncio
 from evaluator.loader import TestLoader
 from evaluator.llm.groq_client import GroqAdapter
@@ -23,6 +24,12 @@ async def run_smoke_tests():
     tests = loader.load_specific_file("datasets/smoke.json")
     
     # Initialize components
+    api_key = os.getenv("GROQ_API_KEY")
+    if not api_key:
+        print("❌ CRITICAL ERROR: GROQ_API_KEY not found in environment variables!")
+        print("   Please add 'GROQ_API_KEY' to your GitHub Repository Secrets.")
+        sys.exit(1)
+
     model = GroqAdapter(model_name="llama-3.3-70b-versatile")
     format_eval = FormatEvaluator()
     compliance_eval = ComplianceEvaluator()
