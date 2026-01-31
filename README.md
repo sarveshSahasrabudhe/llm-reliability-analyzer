@@ -3,7 +3,6 @@
 > **Turn prompt engineering from alchemy into engineering.**
 > A comprehensive platform for semantic evaluation, robustness testing, and regression detection of Large Language Models.
 
-![Dashboard Preview](./docs/images/dashboard_preview.png)
 
 ## 📖 Documentation
 - **[Walkthrough (Day-by-Day Log)](docs/WALKTHROUGH.md)**: Steps we took from Day 1 to Day 11.
