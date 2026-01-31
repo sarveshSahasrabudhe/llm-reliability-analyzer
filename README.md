@@ -66,4 +66,3 @@ python scripts/trigger_full_run.py
 - `scripts/`: Utility scripts for maintenance
 
 ---
-Built with ❤️ by [Your Name] & Google DeepMind Agent
